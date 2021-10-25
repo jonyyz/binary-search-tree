@@ -32,6 +32,11 @@ export class BinarySearchTree {
     return this._root.findNode(value);
   }
 
+  findMinNode() {
+    if (!this._root) return;
+    return this._root.findMinNode();
+  }
+
   findMaxNode() {
     if (!this._root) return;
     return this._root.findMaxNode();

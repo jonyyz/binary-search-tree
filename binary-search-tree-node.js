@@ -88,14 +88,14 @@ export class BinarySearchTreeNode {
     if (this._right) return this._right.findNode(value);
   }
 
+  findMinNode() {
+    if (!this._left) return this;
+    return this._left.findMinNode();
+  }
+
   findMaxNode() {
     if (!this._right) return this;
     return this._right.findMaxNode();
-  }
-
-  findLowestLeafNode() {
-    if (!this._left) return this;
-    return this._left.findLowestLeafNode();
   }
 
   attach(node) {
